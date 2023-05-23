@@ -1,4 +1,4 @@
-<table *ngFor="let activities of activities">
+<!-- <table *ngFor="let activities of activities">
   <thead>
       <tr>
           <th>{{activities.title}}</th>
@@ -10,4 +10,34 @@
           <td>{{activities.endDate}}</td>
       </tr>
   </tbody>
-</table>
+</table> -->
+
+<div
+  class="content"
+  *ngFor="
+    let activities of activities
+      | paginate : { itemsPerPage: 9, currentPage: p }
+  "
+>
+  <img src="{{ activities.imageUrl }}" />
+  <br />
+  <span
+    ><b>{{ activities.title }}</b></span
+  >
+  <br />
+  <ng-container *ngFor="let showinfo of activities.showInfo">
+    <span>場地：{{ showinfo.locationName }}</span>
+    <br />
+    <span>票價：{{ showinfo.price }}</span>
+  </ng-container>
+  <br />
+  <span>開始日期：{{ activities.startDate }}</span>
+  <br />
+  <span>結束日期：{{ activities.endDate }}</span>
+</div>
+<pagination-controls
+  class="ngx-pagination"
+  (pageChange)="p = $event"
+  previousLabel="上一頁"
+  nextLabel="下一頁"
+></pagination-controls>

@@ -9,7 +9,9 @@ import { HomeService } from '../service/home.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  showinfo: Showinfo[] = [];
+  p: number = 1;
+  maxSize:string = "20";
+  showinfo: Activities[] = [];
   activities: Activities[] = [];
   constructor(private home: HomeService) {}
 
