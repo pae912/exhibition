@@ -8,7 +8,7 @@ export class MusicService {
   constructor(private http: HttpClient) {}
 
   getData(){
-    const url = '../../assets/music performance.json';
+    const url = '../../assets/json//music performance.json';
     return this.http.get<any>(url,{});
   }
 }

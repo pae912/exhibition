@@ -9,7 +9,7 @@ export class HomeService {
   constructor(private http:HttpClient) { }
 
   getData(){
-    const url = '../../assets/exhibition information.json';
+    const url = '../../assets/json/exhibition information.json';
     return this.http.get<any>(url,{});
   }
 }

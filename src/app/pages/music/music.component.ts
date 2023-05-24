@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./music.component.scss'],
 })
 export class MusicComponent {
+  p: number = 1;
+  maxSize:string = "20";
   musicShow:Music[] = [];
   constructor(private music: MusicService) {}
   ngOnInit(): void {

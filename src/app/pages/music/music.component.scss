@@ -17,6 +17,7 @@
 table {
   border-spacing: 0;
   width: 100%;
+  padding: 30px 5px;
 }
 tr {
   text-align: center;
@@ -48,4 +49,7 @@ table tbody tr:last-child td:first-child {
 
 table tbody tr:last-child td:last-child {
   border-radius: 0 0 5px 0;
+}
+.ngx-pagination {
+  float: right;
 }

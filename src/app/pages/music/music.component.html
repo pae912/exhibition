@@ -6,17 +6,24 @@
       <th>場地名稱</th>
     </tr>
   </thead>
-  <tbody *ngFor="let musicshow of musicShow">
+  <tbody
+    *ngFor="
+      let musicshow of musicShow
+        | paginate : { itemsPerPage: 20, currentPage: p }
+    "
+  >
     <ng-container *ngFor="let showInfo of musicshow.showInfo">
       <tr>
         <td>{{ musicshow.title }}</td>
         <td>{{ musicshow.startDate }}~{{ musicshow.endDate }}</td>
-        <td>{{showInfo.locationName}}</td>
+        <td>{{ showInfo.locationName }}</td>
       </tr>
     </ng-container>
   </tbody>
 </table>
-
-<!-- <div >
-  <span>{{ musicshow.title }}</span>
-</div> -->
+<pagination-controls
+  class="ngx-pagination"
+  (pageChange)="p = $event"
+  previousLabel="上一頁"
+  nextLabel="下一頁"
+></pagination-controls>
