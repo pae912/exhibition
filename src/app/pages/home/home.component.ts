@@ -1,7 +1,6 @@
-import { Activities } from './../model/activities';
-import { Showinfo } from './../model/showinfo';
+import { Activities } from '../../api-sdk/model/activities';
 import { Component } from '@angular/core';
-import { HomeService } from '../service/home.service';
+import { HomeService } from '../../api-sdk/service/home.service';
 
 @Component({
   selector: 'app-home',
