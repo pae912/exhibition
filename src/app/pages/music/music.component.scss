@@ -14,42 +14,65 @@
 //   width: 80%;
 //   margin: 20px auto;
 // }
+
+//////////////////
+// table {
+//   border-spacing: 0;
+//   width: 100%;
+//   padding: 30px 5px;
+// }
+// tr {
+//   text-align: center;
+// }
+// th {
+//   padding: 10px;
+// }
+// table tbody tr:nth-child(odd){
+//   background-color: #eee
+// }
+// // table tbody tr:nth-child(even){
+// //   background-color: #d48888
+// // }
+// table thead {
+//   background-color: rgb(184, 184, 219);
+//   color: white;
+// }
+// // table thead th:first-child {
+// //   border-radius: 5px 0 0 0;
+// //   border: 1px solid blue;
+// // }
+// // table thead th:last-child {
+// //   border-radius: 0 5px 0 0;
+// //   border-right: 1px solid blue;
+// // }
+// table tbody tr:last-child td:first-child {
+//   border-radius: 0 0 0 5px;
+// }
+
+// table tbody tr:last-child td:last-child {
+//   border-radius: 0 0 5px 0;
+// }
+// .ngx-pagination {
+//   float: right;
+// }
+
 table {
-  border-spacing: 0;
   width: 100%;
-  padding: 30px 5px;
-}
-tr {
-  text-align: center;
-}
-th {
-  padding: 10px;
-}
-table tbody tr:nth-child(odd){
-  background-color: #eee
-}
-// table tbody tr:nth-child(even){
-//   background-color: #d48888
-// }
-table thead {
-  background-color: rgb(184, 184, 219);
-  color: white;
-}
-// table thead th:first-child {
-//   border-radius: 5px 0 0 0;
-//   border: 1px solid blue;
-// }
-// table thead th:last-child {
-//   border-radius: 0 5px 0 0;
-//   border-right: 1px solid blue;
-// }
-table tbody tr:last-child td:first-child {
-  border-radius: 0 0 0 5px;
 }
 
-table tbody tr:last-child td:last-child {
-  border-radius: 0 0 5px 0;
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
 }
-.ngx-pagination {
-  float: right;
+
+td, th {
+  width: 25%;
 }
+
+.mat-mdc-form-field{
+  margin-top: 30px;
+
+}
+// .mat-mdc-table{
+//   margin: 20px;
+// }

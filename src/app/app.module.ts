@@ -9,7 +9,13 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { MusicComponent } from './pages/music/music.component';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
-
+import { FormComponent } from './form/form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { RouterModule } from '@angular/router';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -18,14 +24,22 @@ import { FooterComponent } from './component/footer/footer.component';
     MusicComponent,
     HeaderComponent,
     FooterComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
     NgxPaginationModule,
     HttpClientModule,
-    AppRoutingModule
+    MatTableModule,
+    MatInputModule,
+    MatPaginatorModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    RouterModule,
+    AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
