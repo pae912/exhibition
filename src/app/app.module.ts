@@ -12,12 +12,10 @@ import { FooterComponent } from './component/footer/footer.component';
 import { FormComponent } from './form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTableModule } from '@angular/material/table';
-import { MatInputModule } from '@angular/material/input';
 import { RouterModule } from '@angular/router';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatButtonModule } from '@angular/material/button';
 import { ExhibitionComponent } from './pages/exhibition/exhibition.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ThemeModule } from './theme/theme.module';
 
 
 @NgModule({
@@ -29,18 +27,16 @@ import { ExhibitionComponent } from './pages/exhibition/exhibition.component';
     FooterComponent,
     FormComponent,
     ExhibitionComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     NgxPaginationModule,
     HttpClientModule,
-    MatTableModule,
-    MatInputModule,
-    MatButtonModule,
-    MatPaginatorModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    ThemeModule,
     RouterModule,
     AppRoutingModule,
   ],

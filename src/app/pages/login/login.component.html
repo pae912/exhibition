@@ -1,0 +1,38 @@
+<div class="container">
+  <form>
+    <mat-form-field>
+      <mat-label>帳號</mat-label>
+      <input
+        type="email"
+        matInput
+        [formControl]="email"
+        placeholder="輸入信箱"
+      />
+      <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
+        格式錯誤
+      </mat-error>
+      <mat-error *ngIf="email.hasError('required')"> 信箱必填 </mat-error>
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <mat-label>密碼</mat-label>
+      <input
+        type="password"
+        matInput
+        [formControl]="password"
+        placeholder="輸入密碼"
+      />
+      <mat-error
+        *ngIf="password.hasError('password') && !password.hasError('minLength')"
+        >少於5字元</mat-error
+      >
+      <mat-error
+        *ngIf="password.hasError('password') && !password.hasError('maxLength')"
+        >多於10字元</mat-error
+      >
+      <mat-error *ngIf="password.hasError('required')">密碼必填</mat-error>
+    </mat-form-field>
+    <br />
+    <button mat-button>登入</button>
+  </form>
+</div>
