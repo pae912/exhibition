@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class HomeService {
+export class ExhibitionService {
 
   constructor(private http:HttpClient) { }
 

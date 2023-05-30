@@ -48,12 +48,13 @@
       required
       minlength="4"
       [(ngModel)]="account"
+      #account = "ngModel"
     />
   </p>
-  <div *ngIf="name.invalid && (name.dirty || name.touched)">
-    <div *ngIf="name.errors?.['required']">姓名必填</div>
-    <div *ngIf="name.errors?.['minlength']">至少2位</div>
-    <div *ngIf="name.errors?.['maxl']"></div>
+  <div *ngIf="account.invalid && (account.dirty || account.touched)">
+    <div *ngIf="account.errors?.['required']">姓名必填</div>
+    <div *ngIf="account.errors?.['minlength']">至少2位</div>
+    <div *ngIf="account.errors?.['maxl']"></div>
   </div>
   <p>
     <label for="password">密碼：</label>
@@ -73,16 +74,75 @@
   <input type="account" formControlName="name" pInputText>
   <small *ngIf="!invalidForm.controls.account.pristine && invalidForm.controls.account.errors?.['required']">填寫帳號</small>
 </label> -->
-<form>
+
+<!-- <form #form="ngForm">
   <p>
     <label for="account">帳號：</label>
-    <input type="email" name="account" id="account">
+    <input
+      type="email"
+      name="account"
+      id="account"
+      [(ngModel)]="account"
+      placeholder="請輸入帳號"
+      required
+      #account
+    />
   </p>
+  <div *ngIf="account">
+    <p *ngIf="account.errors?.['required']">請輸入帳號</p>
+    <p *ngIf="account.errors?.['pattern']">帳號格式錯誤</p>
+  </div>
   <p>
     <label for="password">密碼：</label>
-    <input type="password" name="password" id="password">
+    <input
+      type="password"
+      name="password"
+      id="password"
+      [(ngModel)]="password"
+      placeholder=""
+    />
   </p>
   <p>
     <button type="submit">登入</button>
   </p>
 </form>
+
+<pre>{{ form.value | json }}</pre> -->
+<div class="container">
+  <form>
+    <mat-form-field>
+      <mat-label>帳號</mat-label>
+      <input
+        type="email"
+        matInput
+        [formControl]="email"
+        placeholder="輸入信箱"
+      />
+      <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
+        格式錯誤
+      </mat-error>
+      <mat-error *ngIf="email.hasError('required')"> 信箱必填 </mat-error>
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <mat-label>密碼</mat-label>
+      <input
+        type="password"
+        matInput
+        [formControl]="password"
+        placeholder="輸入密碼"
+      />
+      <mat-error
+        *ngIf="password.hasError('password') && !password.hasError('minLength')"
+        >少於5字元</mat-error
+      >
+      <mat-error
+        *ngIf="password.hasError('password') && !password.hasError('maxLength')"
+        >多於10字元</mat-error
+      >
+      <mat-error *ngIf="password.hasError('required')">密碼必填</mat-error>
+    </mat-form-field>
+    <br />
+    <button mat-button>登入</button>
+  </form>
+</div>

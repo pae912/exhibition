@@ -34,7 +34,6 @@ export class FormComponent {
     aliases: this.fb.array([this.fb.control('')]),
   });
 
-
   constructor(private fb: FormBuilder) {}
 
   onSubmit() {
@@ -50,10 +49,11 @@ export class FormComponent {
   }
   // Angular 官方文件 //
 
-  account = '';
-  password = '';
-  accountErrorMessage = '';
-  passwordErrorMessage = '';
+  // account = '';
+  // password = '';
+  // accountErrorMessage = '';
+  // passwordErrorMessage = '';
+
   // invalid = this.fb.group({
   //   account: ['', Validators.required],
   //   password: [
@@ -64,9 +64,20 @@ export class FormComponent {
   //     ])
   //   ],
   // });
+  // get account() { return this.invalid.get('account'); }
 
   // accountValueChange(account: string, errors: ValidationErrors): void {
   //   this.account = account;
   //   this.validationCheck(errors, 'account');
   // }
+
+  // account = "text@email.com";
+  // password = "12345678";
+
+  email = new FormControl('', [Validators.required, Validators.email]);
+  password = new FormControl('', [
+    Validators.required,
+    Validators.minLength(5),
+    Validators.maxLength(10)
+  ]);
 }

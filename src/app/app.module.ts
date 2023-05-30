@@ -16,6 +16,9 @@ import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { RouterModule } from '@angular/router';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatButtonModule } from '@angular/material/button';
+import { ExhibitionComponent } from './pages/exhibition/exhibition.component';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +28,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     HeaderComponent,
     FooterComponent,
     FormComponent,
+    ExhibitionComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +36,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     HttpClientModule,
     MatTableModule,
     MatInputModule,
+    MatButtonModule,
     MatPaginatorModule,
     FormsModule,
     ReactiveFormsModule,
