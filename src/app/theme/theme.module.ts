@@ -5,8 +5,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
-
-
 @NgModule({
   declarations: [],
   imports: [
@@ -16,11 +14,11 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatButtonModule,
     MatPaginatorModule,
   ],
-  exports:[
+  exports: [
     MatTableModule,
     MatInputModule,
     MatButtonModule,
     MatPaginatorModule,
-  ]
+  ],
 })
-export class ThemeModule { }
+export class ThemeModule {}

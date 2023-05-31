@@ -1,8 +1,6 @@
-table {
-  border: 1px solid red;
-}
 .content {
   text-align: center;
+  margin-top: 60px;
   .card {
     background-color: #fae1c3;
     width: 450px;
@@ -13,7 +11,7 @@ table {
     img {
       width: 300px;
       height: 200px;
-      display: block;
+      // display: block;
       padding-top: 15px;
       margin: auto;
     }
