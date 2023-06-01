@@ -1,20 +1,38 @@
-.container{
-  position: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 30px;
-}
-form{
-  width: 500px;
-  // margin: 80px;
-  // position: relative;
+.container {
+  // position: flex;
   // align-items: center;
   // justify-content: center;
-  // flex-wrap: wrap;
-  // left: 30%;
-  // top: 2%;
+  margin-top: 90px;
+  width: 400px;
+  height: 280px;
   background-color: #f6dadb;
+  padding: 15px;
+  .form {
+    width: 300px;
+    margin: 20px;
+    // position: relative;
+    // align-items: center;
+    // justify-content: center;
+    // flex-wrap: wrap;
+    // left: 30%;
+    // top: 2%;
+    // background-color: #f6dadb;
+    .form-txt {
+      margin: 10px;
+      .form-check {
+        float: left;
+      }
+      .forget-password {
+        float: right;
+      }
+    }
+    .btn {
+      margin: 20px 120px;
+      text-align: center;
+    }
+  }
 }
-button{
-  background-color: #f6dadb;
+
+button {
+  // background-color: #f6dadb;
 }

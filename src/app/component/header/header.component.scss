@@ -1,3 +1,43 @@
+// nav {
+//   position: fixed;
+//   top: 0;
+//   display: block;
+//   width: 100%;
+//   z-index: 1;
+//   ul {
+//     background-color: #f3caca;
+//     list-style-type: none;
+//     height: 50px;
+//     text-align: center;
+//     font-size: 18px;
+//     line-height: 50px;
+//     li {
+//       display: inline;
+//       padding: 20px;
+//       a {
+//         color: #000000;
+//         text-decoration: none;
+//         padding: 10px;
+//       }
+//       a:hover {
+//         background-color: #f6acbc;
+//         height: 50px;
+//         color: #000000;
+//         text-decoration: underline;
+//         text-underline-offset: 8px;
+//       }
+//     }
+//   }
+// }
+
+.nav-hidden {
+  transform: translateY(-100%);
+}
+
+.nav-visible {
+  transform: translateY(0);
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -7,33 +47,68 @@ nav {
   ul {
     background-color: #f3caca;
     list-style-type: none;
+    padding: 0;
+    margin: 0;
     height: 50px;
     text-align: center;
     font-size: 18px;
     line-height: 50px;
+    cursor: pointer;
     li {
-      display: inline;
-      padding: 20px;
+      display: inline-block;
+      margin-right: 20px;
+
       a {
-        color: #000000;
+        color: #333;
         text-decoration: none;
-        padding: 10px;
+
+        &:hover {
+          color: #000;
+          height: 50px;
+          color: #000000;
+          text-decoration: underline;
+          text-underline-offset: 8px;
+        }
       }
-      a:hover {
-        background-color: #f6acbc;
-        height: 50px;
-        color: #000000;
-        text-decoration: underline;
-        text-underline-offset: 8px;
+
+      &.dropdown {
+        position: relative;
+        &:hover {
+          text-decoration: underline;
+          text-underline-offset: 8px;
+        }
+        .dropdown-menu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          height: 120px;
+          background-color: #fff;
+          padding: 8px;
+          border: 1px solid #ccc;
+          margin: 0px -50px;
+          li {
+            margin-bottom: 1px;
+
+            &:hover {
+              margin-bottom: 0;
+              text-decoration: underline;
+              text-underline-offset: 8px;
+            }
+
+            a {
+              color: #333;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        .dropdown-menu {
+          display: block;
+        }
       }
     }
   }
-}
-
-.nav-hidden {
-  transform: translateY(-100%);
-}
-
-.nav-visible {
-  transform: translateY(0);
 }
